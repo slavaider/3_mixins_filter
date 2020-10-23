@@ -1,22 +1,15 @@
-
 export default {
-  name: 'lol',
-  components: {},
-  props: [],
-  data () {
-    return {
+    name: 'lol',
+    components: {},
+    props: [],
+    data() {
+        return {}
+    },
+    computed: {},
+    mounted() {
 
-    }
-  },
-  computed: {
-
-  },
-  mounted () {
-
-  },
-  methods: {
-
-  }
+    },
+    methods: {}
 }
 
 
