@@ -3,16 +3,21 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css"
               rel="stylesheet">
         <div class="container" id="app">
-            <h2>{{Title}}</h2>
-            <app-car></app-car>
+            <!-- Directive:[bindings.arg].[bindings.modifier] = "[bindings.value]"-->
+            <p v-colored:color.font.delay="'green'">{{Title}}</p>
+            <p v-font>{{Title}}</p>
+
             <label>
                 <input class="form-control" type="text" v-model="searchName"/>
             </label>
+
             <ul class="list-group col-3">
                 <li :key="name" class="list-group-item" v-for="name of filterNames">{{ name }}</li>
             </ul>
             <hr/>
             <app-counter></app-counter>
+
+
             <app-car>
                 <h2 slot="title">{{carName}}</h2>
                 <p slot="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id quibusdam incidunt magni
@@ -71,7 +76,6 @@
         mixins: [listMixin],
         watch: {
             age(value) {
-                // eslint-disable-next-line no-console
                 console.log(value);
             }
         },
@@ -91,7 +95,7 @@
         directives: {
             font: {
                 bind(el) {
-                    el.style.fontSize = "100px";
+                    el.style.fontSize = "50px";
                 }
             }
         },
