@@ -6,17 +6,16 @@
             <!-- Directive:[bindings.arg].[bindings.modifier] = "[bindings.value]"-->
             <p v-colored:color.font.delay="'green'">{{Title}}</p>
             <p v-font>{{Title}}</p>
+            <!--Filters-->
+            <p>{{'LOL123'|lowercase}}</p>
+            <p>{{'lol123'|uppercase}}</p>
+            <p>{{'lol123'|uppercase|lowercase}}</p>
 
             <label>
                 <input class="form-control" type="text" v-model="searchName"/>
             </label>
 
-            <ul class="list-group col-3">
-                <li :key="name" class="list-group-item" v-for="name of filterNames">{{ name }}</li>
-            </ul>
-            <hr/>
             <app-counter></app-counter>
-
 
             <app-car>
                 <h2 slot="title">{{carName}}</h2>
