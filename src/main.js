@@ -12,6 +12,12 @@ Vue.directive('colored', ColorDirective)
 
 Vue.component('app-counter', Counter)
 
+Vue.mixin({
+    beforeCreate() {
+        console.log('beforeCreate')
+    }
+})
+
 export const eventEmitter = new Vue();
 
 new Vue({
